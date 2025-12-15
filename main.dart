@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/classroom/my_classroom.dart';
+import 'login_screen1.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,15 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MainPage());
-  }
-}
-
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: MyClassroom1());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Login Demo',
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
+      home: const LoginScreen(),
+    );
   }
 }
